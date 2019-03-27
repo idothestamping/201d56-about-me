@@ -8,7 +8,7 @@ body {
   margin: 0;
 }
 .col-1 {
-  background: #D7E8D4;
+  background: #ffa3a3;
   flex: 1;
 }
 .col-2 {
@@ -26,11 +26,13 @@ body {
   min-height: 60vh;
 }
 header, footer {
-  background: yellowgreen;
+  background: #555555;
   height: 15vh;
+  color: white;
 }
 header, footer, article, nav {
   padding: 1em;
+  
 }
 
 .win {
@@ -49,15 +51,20 @@ header, footer, article, nav {
   text-align: center;
   background-size: contain;
   background-repeat:no-repeat;
-  height:300px;
+  height:200px;
   max-width: 100%;
 }
 
 #result {
+  font-weight: 800;
   margin-top: 10px;
   /* display: inline; */
   flex-direction: column;
   /* flex: 2; */
   display: flex;
   text-align: center;
+}
+.top10 {
+  font-size: 120% !important;
+  font-weight: 800;
 }
