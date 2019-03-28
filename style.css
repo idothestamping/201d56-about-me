@@ -8,7 +8,7 @@ body {
   margin: 0;
 }
 .col-1 {
-  background: #ffa3a3;
+  background: #5bceff;
   flex: 1;
 }
 .col-2 {
@@ -32,17 +32,13 @@ header, footer {
 }
 header, footer, article, nav {
   padding: 1em;
-  
 }
-
 .win {
   background-image: url("https://i.imgur.com/7Dw04xT.jpg");
 }
-
 .fail {
   background-image: url("https://i.imgur.com/ijBFGQZ.gif");
 }
-
 #picbox {
   flex-direction: column;
   margin: 5px 45px;
@@ -54,13 +50,10 @@ header, footer, article, nav {
   height:200px;
   max-width: 100%;
 }
-
 #result {
   font-weight: 800;
   margin-top: 10px;
-  /* display: inline; */
   flex-direction: column;
-  /* flex: 2; */
   display: flex;
   text-align: center;
 }
