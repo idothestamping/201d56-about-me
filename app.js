@@ -1,20 +1,20 @@
 'use strict';
 
 var myQuestions = [
-  ['Am I handsome? yes or no'],
-  ['Am I awesome? yes or no'],
-  ['Did I make this site in 1hr? yes or no'],
-  ['Do I like Trump? yes or no'],
-  ['Was I already an Amazonian? yes or no'],
+  'Am I handsome? yes or no',
+  'Am I awesome? yes or no',
+  'Did I make this site in 1hr? yes or no',
+  'Do I like Trump? yes or no',
+  'Was I already an Amazonian? yes or no',
 ];
 var myAnswers = [
-  ['YES'],
-  ['YES'],
-  ['NO'],
-  ['NO'],
-  ['YES'],
-  [5],
-  ['strawberry', 'chocolate', 'green tea', 'rocky road']
+  'YES',//0
+  'YES',//1
+  'NO',//2
+  'NO',//3
+  'YES',//4
+  5,//5
+  ['strawberry', 'chocolate', 'green tea', 'rocky road']//6
 ];
 var totalCount = 0;
 // personalize user experience with their name
@@ -27,38 +27,53 @@ if(userName === 'doug'){
   alert('Hi, ' + userName + '.  Welcome to the site!');
 }
 
-for(var i=0; i<myQuestions.length; i += 1 ) { // loop through questions
-  var userAnswer = prompt(myQuestions[i][0]); // get user input
-  if(userAnswer.toUpperCase() === myAnswers[i][0]){
-    alert('You\'re Right!');
-    totalCount++;
-  } else {
-    alert('Nope, that\'s wrong...');
-  }
+for(var i=0; i < myQuestions.length; i += 1 ) { // loop through questions
+  var userAnswer = prompt(myQuestions[i]).toUpperCase(); // get user input
+  checkRightAnswer(userAnswer,myAnswers[i]);
 }
 
 // Question 6: Guessing the number with 3 tries
 var numberOfChances = 0;
-var numberQuestion = prompt('How many dirty martini\'s can I drink in one setting? (enter a number)');
-while (numberQuestion != myAnswers[5] && numberOfChances <= 2 ) {
-  if (myAnswers[5] < numberQuestion) {
-    numberQuestion = prompt('You\'ve guessed too high! Keep guessing!');
-  } else {
-    numberQuestion = prompt('You\'ve guessed too low! Keep guessing!');
+var numberQuestion = parseInt(prompt('How many dirty martini\'s can I drink in one setting? (enter a number)'));
+while (numberOfChances <= 2 ) { // too low to high number 
+  if(numberQuestion == myAnswers[5]){
+    alert('You\'re Right!');
+    totalCount++;
+    break;
+  }else{
+    numHighOrLow(myAnswers[5], numberQuestion);
+    console.log(numberOfChances);
   }
   numberOfChances++;
-  console.log(numberOfChances);
 }
 
 // Question 7: Multiple Possible Answers
 var numberOfChances2 = 0;
-var iceCreamQuestion = prompt('Name any 1 of 4 ice cream flavors I like?');
-if(myAnswers[6].indexOf(iceCreamQuestion) === -1 && numberOfChances2 <= 2) {
-  prompt('Try another flavor');
-  numberOfChances++;
-} else {
-  totalCount++;
-  alert('Nice, you got it right!');
+var iceCreamArr = myAnswers[6];
+var iceCream = 0;
+var iceCreamGuessed = false;
+while (numberOfChances2 <= 2 ) { 
+  var iceCreamQuestion = prompt('Name any 1 of 4 ice cream flavors I like?');
+  while(iceCream != iceCreamArr.length){
+    if(iceCreamQuestion === iceCreamArr[iceCream]){
+      alert('You\'re Right!');
+      totalCount++;
+      iceCreamGuessed = true;
+      break;
+    }else{
+      console.log(numberOfChances2);
+      alert('You\'re Wrong!');
+      break;
+    }
+    
+    iceCream++;
+  }
+
+  if(iceCreamGuessed){
+    break;
+  }
+
+  numberOfChances2++;
 }
 
 // guess the final answer
@@ -76,4 +91,20 @@ if(finalAnswer === 'doug'){
 }
 
 
+function numHighOrLow(correct, answer){
+  if (correct < answer) {
+    numberQuestion = prompt('You\'ve guessed too high! Keep guessing!');
+  } else {
+    numberQuestion = prompt('You\'ve guessed too low! Keep guessing!');
+  }
+}
 
+function checkRightAnswer(x,y){
+  if(x === y){
+    alert('You\'re Right!');
+    totalCount++;
+  } else {
+    alert('Nope, that\'s wrong...');
+  }
+
+}
