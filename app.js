@@ -16,7 +16,7 @@ var myAnswers = [
   5,//5
   ['strawberry', 'chocolate', 'green tea', 'rocky road']//6
 ];
-var totalCount = 0
+var totalCount = 0;
 // personalize user experience with their name
 var userName = prompt('What is your name?');
 if(userName === 'doug'){
@@ -75,9 +75,6 @@ while (numberOfChances2 <= 2 ) {
 
   numberOfChances2++;
 }
-
-
-
 
 // guess the final answer
 var finalAnswer = prompt('Final Question: So what\'s my name?');
