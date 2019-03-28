@@ -16,7 +16,7 @@ var myAnswers = [
   [5],
   ['strawberry', 'chocolate', 'green tea', 'rocky road']
 ];
-var totalCount = 0
+var totalCount = 0;
 // personalize user experience with their name
 var userName = prompt('What is your name?');
 if(userName === 'doug'){
@@ -50,18 +50,10 @@ while (numberQuestion != myAnswers[5] && numberOfChances <= 2 ) {
   console.log(numberOfChances);
 }
 
-// Needs more work... keep to ask for feedback for Question 6.
-// if (numberQuestion === MyAnswers[5]){
-//   alert('You\'re Right!');
-//   totalCount++; // Count of questions with correct answer.
-// } else if(numberOfChances >= 2){
-//   alert('Let\'s move on...');
-// }
-
 // Question 7: Multiple Possible Answers
 var numberOfChances2 = 0;
 var iceCreamQuestion = prompt('Name any 1 of 4 ice cream flavors I like?');
-if(myAnswers[6].indexOf(iceCreamQuestion) == -1 && numberOfChances2 <= 2) {
+if(myAnswers[6].indexOf(iceCreamQuestion) === -1 && numberOfChances2 <= 2) {
   prompt('Try another flavor');
   numberOfChances++;
 } else {
