@@ -1,4 +1,14 @@
 # 201d56-about-me
-About me 
+Code Fellows 201 - About Me 
 
-Deployment: http://bit.ly/2Yv2jyL
+Front-End Web Page
+https://idothestamping.github.io/201d56-about-me/
+
+Technology:
+* HTML/CSS
+* JavaScript
+
+Framework:
+* Materialize
+
+
