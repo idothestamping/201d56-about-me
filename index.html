@@ -1,184 +1,117 @@
 <!doctype html>
 <div class="se-pre-con"></div>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About Me</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Me</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <!-- Materialize -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+</head>
 
-  <header>
-    <div class="navbar">
-        <nav>
-          <div class="nav-wrapper">
-            <a href="/" class="brand-logo"
-              ><img src="ico/fingerheart.ico" alt="Smiley face" width="40" />
-              About Me</a
-            >
-            <a href="/main" data-target="mobile-demo" class="sidenav-trigger"
-              ><i class="material-icons">menu</i></a
-            >
-            <ul id="menu1" class="right hide-on-med-and-down">
-              <li>
-                <a class="menu2" href=""><i class="material-icons">home</i></a>
-              </li>
-              <li>
-                <a class="menu2" href="" onclick="startGame();return false;" 
-                  ><i class="material-icons">videogame_asset</i></a
-                > 
-              </li>
-              <li><a class="menu2" href="#contact"><i class="material-icons">person</i></a
-                ></li>
-            </ul>
-          </div>
-        </nav>
+<header>
+  <!-- Navbar -->
+  <div class="navbar">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">
+          <img src="ico/fingerheart.ico" alt="Smiley face" width="40" />About Me</a>
+        <a href="/main" data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i></a>
+        <ul id="menu1" class="right hide-on-med-and-down">
+        <li>
+          <a class="menu2" href="">
+            <i class="material-icons">home</i></a>
+        </li>
+        <li>
+          <a class="menu2" href="" onclick="startGame();return false;">
+            <i class="material-icons">videogame_asset</i></a> 
+        </li>
+        <li>
+          <a class="menu2" href="#contact">
+          <i class="material-icons">person</i></a>
+        </li>
+        </ul>
       </div>
-      
-      <ul class="sidenav" id="mobile-demo">
-        <li>
-          <a class="menu2" href=""><i class="material-icons">home</i></a>
-        </li>
-        <li>
-          <a class="menu2" href=""
-            ><i class="material-icons">videogame_asset</i></a
-          >
-        </li>
-        <li><a class="menu2" href="">Contact</a></li>
-      </ul>
-  </header>
+    </nav>
+</div>
+  <!-- Mobile Nav -->
+  <ul class="sidenav" id="mobile-demo"> 
+    <li>
+      <a class="menu2" href="">
+        <i class="material-icons">home</i></a>
+    </li>
+    <li>
+      <a class="menu2" href="" onclick="startGame();return false;">
+      <i class="material-icons">videogame_asset</i></a>
+    </li>
+    <li>
+      <a class="menu2" href="#contact">
+      <i class="material-icons">person</i></a>
+    </li>
+  </ul>
+</header>
 
-  <body>
-    <div class="container">
-
-        <div class="row center">
-          <div class="col s12">
-              <img id="myGif" src="gif/IMG_1033.gif" alt="Smiley face" height="400px">
-          </div>
-          <div class="row center">
-          <div class="col s12">
-            <br>
-            <br>
-            <hr>
-            <br>
-              <div id="bio" class="mobilefriendlytext">        Born and raised in Korea, lived 2/3rd of my life here in beautiful WA.  I've made a tough mid-life career pivot to get back to what I love, back to when I was a kid totally enchanted by a 386DX2 MS-DOS system with 4mb RAM and a handful of 5" floopy disks.  I needed to get back to that special place where I get lost in problem solving, trouble shooting and increasing my technical skills that leads to more empowerment.  Diving deep head first and flexing my creativity to fight for something and bring tangible changes to the world.
-                  And most importantly, having FUN while doing it.</div>
-          </div>
-        </div>
-        </div>
-        <br>
-        <hr>
-        <br>
-        <br>
-        <footer>
-            <footer id="contact" class="page-footer">
-                <div class="container">
-                  <div class="row">
-                    <div class="col l4 s12">
-                      <h5 class="white-text">DO WHAT YOU LOVE</h5>
-                      <a class="grey-text text-lighten-4" href="https://github.com/idothestamping/201d56-about-me">Git Repo</a>
-                      <a class="grey-text text-lighten-4" href="#!">douglas.klemp@gmail.com</a>
-                    </div>
-                    <div class="col l6 offset-l2 s12">
-                      <h5 class="white-text">Doug Klemp</h5>
-                      <ul>
-                        <li>
-                          <a class="grey-text text-lighten-3" href="#!"
-                            >Web Developer | SDE | Artist</a>
-                        </li>
-                        <li>
-                          <a class="grey-text text-lighten-3" href="#!"
-                            >Father to 2 boys: 7yr & 8mo </a>
-                        </li>
-                        <li>
-                          <a class="grey-text text-lighten-3" href="#!"
-                            >Pro Handyman | Optician</a>
-                        </li>
-                        <li>
-                          <a class="grey-text text-lighten-3" href="#!"
-                            >Veteran</a>
-                        </li>
-                        <li>
-                          <a class="grey-text text-lighten-3" href="#!"
-                            >Crytpo Enthusiast | Miner</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="footer-copyright">
-                  <div class="container">
-                    © 2019 Let's Git it!!! Student at Code Fellows
-                  </div>
-                </div>
-              </footer>
-        </footer>
-    </div>
-    <script src='app.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
-  </body>
-</html>
-
-<!-- <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>About Me</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-  </head>
 <body>
-  <nav class="col-1">
-      <div class="top10">Top 10 Movies</div>
-      <ol>
-        <li>Alien2</li>
-        <li>There will be blood</li>
-        <li>Terminator 2</li>
-        <li>Sicario</li>
-        <li>The Dark Knight</li>
-        <li>Saving Private Ryan</li>
-        <li>Groundhog Day</li>
-        <li>The Thing</li>
-        <li>Inside Out</li>
-        <li>Training Day</li>
-        </ol>
-    <div class="top10">Top 10 TV Shows</div>
-      <ol>
-        <li>The Wire</li>
-        <li>The Office</li>
-        <li>Seinfeld</li>
-        <li>Breaking Bad</li>
-        <li>Game of Thrones</li>
-        <li>Dexter</li>
-        <li>Kitchen Nightmares</li>
-        <li>Rosanne</li>
-        <li>Wonder Years</li>
-        <li>Friends</li>
-        </ol>
-  </nav>
-    <div class="col-2">
-  <header>
-    <h1>About Me</h1>
-  </header>
-    <main class="content">
-        <div id="result"></div>
-        <div id="picbox"></div>
-      <article>
-        Born and raised in Korea, lived 2/3rd of my life in this beautiful state of WA.  I've made a tough mid-life career pivot to get back to what I truly fell in love when I was a boy with a 386DX2 MS-DOS system with 4mb RAM and a handful of 5" floopy disks.  I needed to get back to that special place where I get lost in problem solving, trouble shooting and increasing my technical skills that leads to more empowerment.  Diving deep head first and flexing my creativity to fight for something and bring tangible changes to the world.
-        And most importantly, having FUN while doing it.
-      </article>
-    </main>
-    <footer>
-      <p></p>
+  <div class="container">
+    <div class="row center">
+      <div class="col s12">
+        <img id="myGif" class="responsive" src="gif/IMG_1033.gif" alt="Smiley face">
+      </div>
+        <div class="row center">
+        <div class="col s12">
+          <hr>
+          <div id="bio" class="mobilefriendlytext">Born and raised in Korea, lived 2/3rd of my life here in beautiful WA.  I've made a tough mid-life career pivot to get back to what I love, back to when I was a kid totally enchanted by a 386DX2 MS-DOS system with 4mb RAM and a handful of 5" floopy disks.  I needed to get back to that special place where I get lost in problem solving, trouble shooting and increasing my technical skills that leads to more empowerment.  Diving deep head first and flexing my creativity to fight for something and bring tangible changes to the world.  And most importantly, having FUN while doing it.
+          </div>
+          <hr>
+        </div>
+        </div>
+        <!-- footer -->
+          <footer id="contact" class="page-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col l4 s12">
+                  <h5 class="white-text">DO WHAT YOU LOVE</h5>
+                  <a class="grey-text text-lighten-4" href="https://github.com/idothestamping/201d56-about-me">Git Repo</a>
+                  <a class="grey-text text-lighten-4" href="#!">douglas.klemp@gmail.com</a>
+                </div>
+              <div class="col l6 offset-l2 s12">
+                <h5 class="white-text">Doug Klemp</h5>
+                <ul>
+                  <li>
+                    <a class="grey-text text-lighten-3" href="#!">Web Developer | SDE | Artist</a>
+                  </li>
+                  <li>
+                    <a class="grey-text text-lighten-3" href="#!">Father to 2 boys: 7yr & 8mo </a>
+                  </li>
+                  <li>
+                    <a class="grey-text text-lighten-3" href="#!">Pro Handyman | Optician</a>
+                  </li>
+                  <li>
+                    <a class="grey-text text-lighten-3" href="#!">Veteran</a>
+                  </li>
+                  <li>
+                    <a class="grey-text text-lighten-3" href="#!">Crytpo Enthusiast | Miner<a>
+                  </li>
+                </ul>
+              </div>
+              </div>
+            </div>
+            <div class="footer-copyright">
+              <div class="container">
+                © 2019 Let's Git it!!! Student at Code Fellows
+              </div>
+            </div>
+          </footer>
 
-
-    </footer>
     </div>
-  </body>
-  <script src="app.js" async defer></script>
-</html> -->
+  </div>
+  <script src='app.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+</body>
+</html>

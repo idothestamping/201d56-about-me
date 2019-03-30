@@ -3,24 +3,14 @@
 $(window).load(function() {
   // Animate loader off screen
   setInterval(function() {
-    $(".se-pre-con").fadeOut("slow");;
+    $(".se-pre-con").fadeOut("slow");
   }, 1000);
 });
 
 $(document).ready(function(){
-  // alert window auto disappear
-  $("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
-      $("#success-alert").alert('close');
-  });
   // materialize side menu on mobile
   $('.sidenav').sidenav();
-  // materialize carousel
 });
-
-$(document).ready(function(){
-  $('.collapsible').collapsible();
-});
-
 
 var myQuestions = [
   'Am I handsome? Y/N',
@@ -42,14 +32,9 @@ var myAnswers = [
 ];
 var totalCount = 0;
 var startGameLoop = false;
-// var start = prompt('Do you want to play guessing game? Y/N');
-// if(start.toUpperCase() === 'Y'){
-//   startGame();
-//   }else{
-//   alert('Glad you\'re here!');
-// }
 
 // personalize user experience with their name
+// Starts from user clicking Navbar icon
 function startGame(){
   var userName = prompt('What is your name?');
   if(userName === 'doug'){
@@ -91,7 +76,6 @@ function numHighOrLow(correct, answer){
   console.log('end numHighOrLow');
 }
 
-
 // Question 6: Guessing the number with 3 tries
 function questions6(){
   var numberOfChances = 0;
@@ -116,28 +100,25 @@ function questions7(){
   var iceCreamArr = myAnswers[6];
   var iceCream = 0;
   var iceCreamGuessed = false;
-  // while (numberOfChances2 <= 2){ 
-  //   var iceCreamQuestion = prompt('Name any 1 of 4 ice cream flavors I like?');
-    while(iceCream != iceCreamArr.length || numberOfChances2 <= 2){
-      var iceCreamQuestion = prompt('Name any 1 of 4 ice cream flavors I like?');
-      if(iceCreamQuestion === iceCreamArr[iceCream]){
-        alert('You\'re Right!');
-        totalCount++;
-        iceCreamGuessed = true;
-        startGameLoop = true;
-        finalQuestion();
-        break;
-      }else{
-        console.log(numberOfChances2);
-        alert('You\'re Wrong!');
-      }
-      iceCream++;
+  while(iceCream != iceCreamArr.length || numberOfChances2 <= 2){
+    var iceCreamQuestion = prompt('Name any 1 of 4 ice cream flavors I like?');
+    if(iceCreamQuestion === iceCreamArr[iceCream]){
+      alert('You\'re Right!');
+      totalCount++;
+      iceCreamGuessed = true;
+      startGameLoop = true;
+      finalQuestion();
+      break;
+    }else{
+      console.log(numberOfChances2);
+      alert('You\'re Wrong!');
     }
-    if(iceCreamGuessed){
-      iceCreamGuessed == true;
-    }
-    numberOfChances2++;
-  // }
+    iceCream++;
+  }
+  if(iceCreamGuessed){
+    iceCreamGuessed == true;
+  }
+  numberOfChances2++;
 }
 
 
