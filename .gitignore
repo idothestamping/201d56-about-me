@@ -1,1 +1,10 @@
+# npm mods
 node_modules
+package-lock.json
+
+# Mac OS files
+.DS_Store
+
+# Optional eslint cache
+.eslintcache
+
